@@ -1,0 +1,30 @@
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+export default function ProductCard({ p, cart, onAdd }) {
+  const navigate = useNavigate();
+  return (
+    <div className="bg-white rounded-2xl shadow p-4 flex flex-col hover:scale-105 duration-300 text-lg">
+      <img src={p.image} className="rounded-xl cursor-pointer mb-4" onClick={() => navigate(`/product/${p.id}`)}/>
+      <h2 className="text-xl font-semibold">{p.name}</h2>
+      <p className="text-gray-600 mb-4">{p.price} EGP</p>
+
+      <div className="mt-auto flex justify-between items-center">
+        <Link to={`/product/${p.id}`} className="text-gray-500 underline">
+          Details
+        </Link>
+
+        <button
+          onClick={() => onAdd(p)}
+          className="text-lg bg-gray-900 text-white px-8 py-2 rounded-full hover:bg-gray-500 transition duration-300"
+        >
+          {cart.find((item) => item.id === p.id) ? (
+            <Link to="/cart">View Cart</Link>
+          ) : (
+            "Add to Cart"
+          )}
+        </button>
+      </div>
+    </div>
+  );
+}
