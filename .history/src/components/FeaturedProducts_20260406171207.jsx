@@ -1,10 +1,19 @@
 import { Link } from "react-router-dom";
+// import { useState, useEffect } from "react";
 import { useContext } from "react";
 import { ProductsContext } from "../contexts/productsContext";
 
 export default function FeaturedProducts() {
+  // const [products, setProducts] = useState([]);
   const products = useContext(ProductsContext);
 
+  // useEffect(() => {
+  //   fetch(
+  //     "https://raw.githubusercontent.com/Crazy-53/Flowers-Shop/refs/heads/main/src/data/products.json"
+  //   )
+  //     .then((res) => res.json())
+  //     .then((data) => setProducts(data));
+  // }, []);
   const featured = products.slice(0, 6);
 
   return (

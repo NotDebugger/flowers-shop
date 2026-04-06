@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "name": "Sunshine Bliss",
+    "image": "https://i.postimg.cc/k5tBtxr6/Sunshine-Bliss.jpg",
+    "description": "Certain flowers are seasonal and may not be available all year round. If a particular flower presented in our collection is unavailable for any reason , it will be substituted with a flower of similar value , style and color.",
+    "price": 4100.0
+  },
+  {
+    "id": 2,
+    "name": "Pink Symphony",
+    "image": "https://i.postimg.cc/Df5y0CWm/Pink-Symphony.jpg",
+    "description": "Certain flowers are seasonal and may not be available all year round. If a particular flower presented in our collection is unavailable for any reason , it will be substituted with a flower of similar value , style and color.",
+    "price": 3840.0
+  },
+  {
+    "id": 3,
+    "name": "White Bliss",
+    "image": "https://i.postimg.cc/v8XHTP16/white-bliss.jpg",
+    "description": "Certain flowers are seasonal and may not be available all year round. If a particular flower presented in our collection is unavailable for any reason , it will be substituted with a flower of similar value , style and color.",
+    "price": 4860.0
+  },
+  {
+    "id": 4,
+    "name": "50 Premium Red Roses Bouquet",
+    "image": "https://i.postimg.cc/pTJVDCsV/50-Red-Roses-bouquet.jpg",
+    "description": "Certain flowers are seasonal and may not be available all year round. If a particular flower presented in our collection is unavailable for any reason , it will be substituted with a flower of similar value , style and color.",
+    "price": 5010.0
+  },
+  {
+    "id": 5,
+    "name": "Bursting with Love",
+    "image": "https://i.postimg.cc/KjcGQTWj/Bursting-with-Love.jpg",
+    "description": "Certain flowers are seasonal and may not be available all year round. If a particular flower presented in our collection is unavailable for any reason , it will be substituted with a flower of similar value , style and color.",
+    "price": 2930.0
+  },
+  {
+    "id": 6,
+    "name": "A Love Story",
+    "image": "https://i.postimg.cc/vBt8Wh0c/a-love-story.jpg",
+    "description": "Certain flowers are seasonal and may not be available all year round. If a particular flower presented in our collection is unavailable for any reason , it will be substituted with a flower of similar value , style and color.",
+    "price": 2605.0
+  },
+  {
+    "id": 7,
+    "name": "Love Notes",
+    "image": "https://i.postimg.cc/mkZLV9nj/love-notes.jpg",
+    "description": "Certain flowers are seasonal and may not be available all year round. If a particular flower presented in our collection is unavailable for any reason , it will be substituted with a flower of similar value , style and color.",
+    "price": 2425.0
+  },
+  {
+    "id": 8,
+    "name": "Only for you",
+    "image": "https://i.postimg.cc/90xWkM3t/only-for-you.jpg",
+    "description": "Our Signature black bloom box featuring premium ruby red Roses. This classic stunner is designed to wow your loved one! Certain flowers are seasonal and may not be available all year round. If a particular flower presented in our collection is unavailable for any reason , it will be substituted with a flower of similar value , style and color.",
+    "price": 2450.0
+  },
+  {
+    "id": 9,
+    "name": "Be Happy",
+    "image": "https://i.postimg.cc/gjcz4h7m/Be-Happy.jpg",
+    "description": "Certain flowers are seasonal and may not be available all year round. If a particular flower presented in our collection is unavailable for any reason , it will be substituted with a flower of similar value , style and color.",
+    "price": 2940.0
+  },
+  {
+    "id": 10,
+    "name": "Spring Promise",
+    "image": "https://i.postimg.cc/59pNyPHX/spring-promise.jpg",
+    "description": "Certain flowers are seasonal and may not be available all year round. If a particular flower presented in our collection is unavailable for any reason , it will be substituted with a flower of similar value , style and color.",
+    "price": 4290.0
+  },
+  {
+    "id": 11,
+    "name": "Pink Charm",
+    "image": "https://i.postimg.cc/1XW9dtxr/pink-charm.jpg",
+    "description": "Certain flowers are seasonal and may not be available all year round. If a particular flower presented in our collection is unavailable for any reason , it will be substituted with a flower of similar value , style and color.",
+    "price": 2450.0
+  },
+  {
+    "id": 12,
+    "name": "Lilly bloom",
+    "image": "https://i.postimg.cc/tJRqD6cN/lilly-bloom.jpg",
+    "description": "A fresh take on the classic pairing of white and green. Beautiful lush Lilies,Roses and Baby’s breaths loosely arranged in a neutral glass vase. Certain flowers are seasonal and may not be available all year round. If a particular flower presented in our collection is unavailable for any reason , it will be substituted with a flower of similar value , style and color.",
+    "price": 3795.0
+  },
+  {
+    "id": 13,
+    "name": "Morning freshness",
+    "image": "https://i.postimg.cc/7hBxR6v7/morning-freshness.jpg",
+    "description": "Certain flowers are seasonal and may not be available all year round. If a particular flower presented in our collection is unavailable for any reason , it will be substituted with a flower of similar value , style and color.",
+    "price": 2300.0
+  },
+  {
+    "id": 14,
+    "name": "Wild Beauty",
+    "image": "https://i.postimg.cc/RCGVhP3K/Wild-Beauty.jpg",
+    "description": "Certain flowers are seasonal and may not be available all year round. If a particular flower presented in our collection is unavailable for any reason , it will be substituted with a flower of similar value , style and color.",
+    "price": 2900.0
+  },
+  {
+    "id": 15,
+    "name": "CLASSIC CHARM",
+    "image": "https://i.postimg.cc/fyWz5dPm/Classic-Charm.png",
+    "description": "Certain flowers are seasonal and may not be available all year round. If a particular flower presented in our collection is unavailable for any reason , it will be substituted with a flower of similar value , style and color.",
+    "price": 4020.0
+  },
+  {
+    "id": 16,
+    "name": "Think Green",
+    "image": "https://i.postimg.cc/gc4kjMwL/think-green.jpg",
+    "description": "Our Signature mint green bloom box featuring premium white Roses designed in a modern and sophisticated manner. The perfect complement to any celebration. Certain flowers are seasonal and may not be available all year round. If a particular flower presented in our collection is unavailable for any reason , it will be substituted with a flower of similar value , style and color.",
+    "price": 2450.0
+  },
+  {
+    "id": 17,
+    "name": "Pure white",
+    "image": "https://i.postimg.cc/kGjnH43C/pure-white.jpg",
+    "description": "Certain flowers are seasonal and may not be available all year round. If a particular flower presented in our collection is unavailable for any reason , it will be substituted with a flower of similar value , style and color.",
+    "price": 3300.0
+  },
+  {
+    "id": 18,
+    "name": "Pretty In Pink",
+    "image": "https://i.postimg.cc/x8s0ZCrx/pretty-in-pink.jpg",
+    "description": "This gorgeous arrangement of sugary sweet pink roses is designed in our signature grey bloom box to brighten anyones day! Certain flowers are seasonal and may not be available all year round. If a particular flower presented in our collection is unavailable for any reason , it will be substituted with a flower of similar value , style and color.",
+    "price": 2940.0
+  }
+]
