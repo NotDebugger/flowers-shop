@@ -15,7 +15,6 @@ import Footer from "./components/Footer";
 import { ProductsContext } from "./contexts/productsContext";
 import { CartProvider } from "./contexts/CartContext.jsx";
 import Loading from "./components/Loading.jsx";
-import NotFound from "./pages/NotFound.jsx";
 
 export default function App() {
   const [products, setProducts] = useState([]);
@@ -26,7 +25,7 @@ export default function App() {
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
-        setLoading(false);
+        setLoading(true);
       });
   }, []);
 
@@ -50,7 +49,6 @@ export default function App() {
               element={<ProductPage products={products} />}
             />
             <Route path="/cart" element={<Cart />} />
-            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
         </Router>

@@ -1,7 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import React from "react";
 import { useCart } from "../hooks/useCart";
-import NotFound from "./NotFound";
 
 export default function ProductPage({ products }) {
   const { id } = useParams();
