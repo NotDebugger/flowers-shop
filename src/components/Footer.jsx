@@ -39,7 +39,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-5 justify-center items-center w-1/4 md:w-auto">
           <a href="https://www.facebook.com" className="flex justify-center">
             <img
-              src="/src/imgs/facebook.png"
+              src="https://i.postimg.cc/mkZLV9nt/facebook.png"
               alt=""
               className="w-10 hover:w-8 duration-200 hover:opacity-70"
             />
@@ -47,7 +47,7 @@ export default function Footer() {
 
           <a href="https://www.instagram.com" className="flex justify-center">
             <img
-              src="/src/imgs/instagram.png"
+              src="https://i.postimg.cc/sxfjKWLW/instagram.png"
               alt=""
               className="w-10 hover:w-8 duration-200 hover:opacity-70"
             />
@@ -73,10 +73,10 @@ export default function Footer() {
 
         {/* Payment Icons */}
         <div className="flex justify-center md:justify-end gap-6 items-center">
-          <img src="/src/imgs/visa.png" alt="" className="w-16 h-16" />
-          <img src="/src/imgs/card.png" alt="" className="w-20 h-12" />
+          <img src="https://i.postimg.cc/Df5y0CWW/visa.png" alt="" className="w-16 h-16" />
+          <img src="https://i.postimg.cc/kGMJwSHn/card.png" alt="" className="w-20 h-12" />
           <img
-            src="/src/imgs/american-express.png"
+            src="https://i.postimg.cc/W3wpM85z/american-express.png"
             alt=""
             className="w-16 h-16"
           />

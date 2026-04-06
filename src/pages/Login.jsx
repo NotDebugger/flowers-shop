@@ -1,30 +1,55 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 
 export default function Login() {
+  const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  // Handle input changes
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // Submit Handler
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    navigate("/");
+  };
+
   return (
     <>
       <div className="min-h-screen mt-16 lg:mt-5 flex justify-center items-center bg-gray-50 px-4">
         <div
           className="
-          p-6
-          w-full
-          max-w-md
-          bg-white
-          border
-          border-gray-100
-          shadow
-          rounded-2xl
-        "
+            p-6 
+            w-full 
+            max-w-md 
+            bg-white 
+            border 
+            border-gray-100 
+            shadow 
+            rounded-2xl
+          "
         >
           <h1 className="text-2xl md:text-3xl font-bold mb-6 text-center text-gray-500 outfit">
             Log in
           </h1>
 
-          <form className="flex flex-col gap-4">
+          <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
             <label className="ml-1 text-base md:text-lg">Email</label>
             <input
               type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
               placeholder="Email"
               className="p-3 border rounded-xl outline-0"
               required
@@ -33,6 +58,9 @@ export default function Login() {
             <label className="ml-1 text-base md:text-lg">Password</label>
             <input
               type="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
               placeholder="Password"
               className="p-3 border rounded-xl outline-0"
               required

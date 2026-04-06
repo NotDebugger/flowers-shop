@@ -1,7 +1,16 @@
 import { Link } from "react-router-dom";
-import { products } from "../data/products";
+import { useState, useEffect } from "react";
 
 export default function FeaturedProducts() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch(
+      "https://raw.githubusercontent.com/Crazy-53/Flowers-Shop/refs/heads/main/src/data/products.json"
+    )
+      .then((res) => res.json())
+      .then((data) => setProducts(data));
+  }, []);
   const featured = products.slice(0, 6);
 
   return (
@@ -13,7 +22,7 @@ export default function FeaturedProducts() {
         {featured.map((p) => (
           <div
             key={p.id}
-            className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition cursor-pointer"
+            className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition"
           >
             <img src={p.image} className="w-full h-56 object-cover" />
             <div className="p-4 text-center">

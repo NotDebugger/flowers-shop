@@ -1,9 +1,8 @@
 import { useParams, Link } from "react-router-dom";
 import React from "react";
-import { products } from "../data/products";
 import Footer from "../components/Footer";
 
-export default function ProductPage({ cart, setCart }) {
+export default function ProductPage({ cart, setCart, products }) {
   const { id } = useParams();
   const product = products.find((p) => p.id === Number(id));
   const added = cart.find((item) => item.id === product.id);

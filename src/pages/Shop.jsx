@@ -1,9 +1,8 @@
 import ProductCard from "../components/ProductCard";
-import { products } from "../data/products";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
-export default function Shop({ cart, setCart }) {
+export default function Shop({ cart, setCart, products }) {
   const handleAdd = (product) => {
     if (!cart.find((item) => item.id === product.id)) {
       setCart([...cart, product]);

@@ -5,7 +5,7 @@ export default function ProductCard({ p, cart, onAdd }) {
   const navigate = useNavigate();
   return (
     <div className="bg-white rounded-2xl shadow p-4 flex flex-col hover:scale-105 duration-300 text-lg">
-      <img src={p.image} className="rounded-xl cursor-pointer mb-4" onClick={() => navigate(`/product/${p.id}`)}/>
+      <img src={p.image} className="rounded-xl cursor-pointer mb-4" onClick={() => navigate(`/product/${p.id}`)} />
       <h2 className="text-xl font-semibold">{p.name}</h2>
       <p className="text-gray-600 mb-4">{p.price} EGP</p>
 
