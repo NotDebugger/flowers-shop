@@ -17,15 +17,15 @@ export default function ProductPage({ cart, setCart, products }) {
       <div className="flex flex-col-reverse md:flex-row justify-center md:justify-between px-4 py-12 md:px-20 bg-gray-50 mt-10 md:py-32 gap-10">
         <div className="text-black w-full md:w-1/3">
           <h1 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 outfit text-gray-500">
-            {product?.name}
+            {product.name}
           </h1>
 
           <p className="text-base md:text-xl mb-6 md:mb-16">
-            {product?.description}
+            {product.description}
           </p>
 
           <p className="text-gray-600 mb-4 text-xl md:text-2xl">
-            {product?.price} EGP
+            {product.price} EGP
           </p>
 
           <div className="flex items-center gap-4 mb-4">
@@ -63,12 +63,14 @@ export default function ProductPage({ cart, setCart, products }) {
 
         <div className="w-full md:w-2/5 p-6 flex justify-center items-center">
           <img
-            src={product?.image}
+            src={`../../${product.image}`}
             className="rounded-xl w-full max-w-md"
-            alt={product?.name}
+            alt={product.name}
           />
         </div>
       </div>
+
+      <Footer />
     </>
   );
 }

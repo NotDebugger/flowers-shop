@@ -1,11 +1,12 @@
+import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 
 export default function Cart({ cart, setCart }) {
   const increase = (id) => {
     setCart(
       cart.map((item) =>
-        item.id === id ? { ...item, count: (item.count || 1) + 1 } : item,
-      ),
+        item.id === id ? { ...item, count: (item.count || 1) + 1 } : item
+      )
     );
   };
   const decrease = (id) => {
@@ -13,8 +14,8 @@ export default function Cart({ cart, setCart }) {
       cart.map((item) =>
         item.id === id
           ? { ...item, count: Math.max(1, (item.count || 1) - 1) }
-          : item,
-      ),
+          : item
+      )
     );
   };
 
@@ -30,9 +31,7 @@ export default function Cart({ cart, setCart }) {
     <>
       <div className="py-24 bg-gray-50">
         <div className="p-6 max-w-3xl mx-auto">
-          <h1 className="text-3xl font-bold mb-6 outfit text-gray-500">
-            Your Cart
-          </h1>
+          <h1 className="text-3xl font-bold mb-6 outfit text-gray-500">Your Cart</h1>
 
           {cart.length === 0 ? (
             <p className="text-gray-500">Your cart is empty</p>
@@ -111,6 +110,8 @@ export default function Cart({ cart, setCart }) {
           )}
         </div>
       </div>
+
+      <Footer />
     </>
   );
 }

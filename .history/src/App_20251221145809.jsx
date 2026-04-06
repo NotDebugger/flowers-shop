@@ -11,16 +11,13 @@ import About from "./pages/About";
 import Login from "./pages/Login";
 import PasswordForgot from "./pages/PasswordForgot";
 import Signup from "./pages/Signup";
-import Footer from "./components/Footer";
 
 export default function App() {
   const [cart, setCart] = useState([]);
-  const [products, setProducts] = useState([]);
+    const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch(
-      "https://raw.githubusercontent.com/Crazy-53/Flowers-Shop/refs/heads/main/src/data/products.json",
-    )
+    fetch("https://raw.githubusercontent.com/Crazy-53/Flowers-Shop/refs/heads/main/src/data/products.json")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -30,10 +27,7 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route
-          path="/shop"
-          element={<Shop cart={cart} setCart={setCart} products={products} />}
-        />
+        <Route path="/shop" element={<Shop cart={cart} setCart={setCart} products={products} />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
@@ -41,13 +35,10 @@ export default function App() {
         <Route path="/sign-up" element={<Signup />} />
         <Route
           path="/product/:id"
-          element={
-            <ProductPage cart={cart} setCart={setCart} products={products} />
-          }
+          element={<ProductPage cart={cart} setCart={setCart} products={products} />}
         />
-        <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
+        <Route path="/cart" element={<Cart cart={cart} setCart={setCart}/>} />
       </Routes>
-      <Footer />
     </Router>
   );
 }

@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
 export default function Contact() {
@@ -5,9 +6,7 @@ export default function Contact() {
     <>
       <div className="h-lvh flex justify-center items-center bg-gray-50">
         <div className="p-16 w-3xl mt-16 shadow bg-white rounded-4xl">
-          <h1 className="text-3xl font-bold mb-4 text-gray-500 outfit">
-            Contact Us
-          </h1>
+          <h1 className="text-3xl font-bold mb-4 text-gray-500 outfit">Contact Us</h1>
           <p className="mb-4 text-gray-500">
             Feel free to reach out for any inquiries.
           </p>
@@ -32,6 +31,7 @@ export default function Contact() {
           </form>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

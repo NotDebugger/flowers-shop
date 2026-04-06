@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 import FeaturedProducts from "../components/FeaturedProducts";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
         </div>
       </div>
       <FeaturedProducts />
+      <Footer />
     </>
   );
 }

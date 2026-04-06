@@ -1,3 +1,5 @@
+import Footer from "../components/Footer";
+
 export default function PasswordForgot() {
   return (
     <>
@@ -53,6 +55,8 @@ export default function PasswordForgot() {
           </form>
         </div>
       </div>
+
+      <Footer />
     </>
   );
 }

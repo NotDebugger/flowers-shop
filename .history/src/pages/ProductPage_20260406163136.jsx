@@ -21,11 +21,11 @@ export default function ProductPage({ cart, setCart, products }) {
           </h1>
 
           <p className="text-base md:text-xl mb-6 md:mb-16">
-            {product?.description}
+            {product.description}
           </p>
 
           <p className="text-gray-600 mb-4 text-xl md:text-2xl">
-            {product?.price} EGP
+            {product.price} EGP
           </p>
 
           <div className="flex items-center gap-4 mb-4">
@@ -63,9 +63,9 @@ export default function ProductPage({ cart, setCart, products }) {
 
         <div className="w-full md:w-2/5 p-6 flex justify-center items-center">
           <img
-            src={product?.image}
+            src={product.image}
             className="rounded-xl w-full max-w-md"
-            alt={product?.name}
+            alt={product.name}
           />
         </div>
       </div>
