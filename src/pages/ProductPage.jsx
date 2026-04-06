@@ -1,13 +1,13 @@
 import { useParams, Link } from "react-router-dom";
 import React from "react";
-import Footer from "../components/Footer";
+import { useCart } from "../hooks/useCart";
 
-export default function ProductPage({ cart, setCart, products }) {
+export default function ProductPage({ products }) {
   const { id } = useParams();
   const product = products.find((p) => p.id === Number(id));
-  const added = cart.find((item) => item.id === product?.id);
   const [count, setCount] = React.useState(1);
-  console.log(products);
+  const { addToCart, isInCart } = useCart();
+  const added = product ? isInCart(product.id) : false;
 
   const increase = () => setCount(count + 1);
   const decrease = () => count > 1 && setCount(count - 1);
@@ -47,7 +47,7 @@ export default function ProductPage({ cart, setCart, products }) {
           </div>
 
           <button
-            onClick={() => !added && setCart([...cart, { ...product, count }])}
+            onClick={() => !added && addToCart(product, count)}
             className="text-lg md:text-lg bg-gray-900 text-white px-6 py-2 rounded-full w-full text-center hover:bg-gray-500 transition mb-4"
           >
             {added ? <Link to="/cart">View Cart</Link> : "Add to Cart"}

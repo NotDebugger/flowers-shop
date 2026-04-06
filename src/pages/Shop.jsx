@@ -1,12 +1,10 @@
 import ProductCard from "../components/ProductCard";
 import { Link } from "react-router-dom";
+import { useCart } from "../hooks/useCart";
 
-export default function Shop({ cart, setCart, products }) {
-  const handleAdd = (product) => {
-    if (!cart.find((item) => item.id === product.id)) {
-      setCart([...cart, product]);
-    }
-  };
+export default function Shop({ products }) {
+  const { addToCart } = useCart();
+
   return (
     <>
       <div className="mt-20 p-12 text-center bg-gray-100">
@@ -21,7 +19,7 @@ export default function Shop({ cart, setCart, products }) {
       </div>
       <div className="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:mx-28 my-20">
         {products.map((p) => (
-          <ProductCard key={p.id} p={p} cart={cart} onAdd={handleAdd} />
+          <ProductCard key={p.id} p={p} onAdd={addToCart} />
         ))}
       </div>
     </>

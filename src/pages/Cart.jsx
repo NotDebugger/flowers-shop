@@ -1,27 +1,9 @@
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../hooks/useCart";
 
-export default function Cart({ cart, setCart }) {
-  const increase = (id) => {
-    setCart(
-      cart.map((item) =>
-        item.id === id ? { ...item, count: (item.count || 1) + 1 } : item,
-      ),
-    );
-  };
-  const decrease = (id) => {
-    setCart(
-      cart.map((item) =>
-        item.id === id
-          ? { ...item, count: Math.max(1, (item.count || 1) - 1) }
-          : item,
-      ),
-    );
-  };
-
-  const removeItem = (id) => {
-    setCart(cart.filter((item) => item.id !== id));
-  };
-
+export default function Cart() {
+  const { cart, increaseQuantity, decreaseQuantity, removeFromCart, clearCart } =
+    useCart();
   const subtotal = (item) => item.price * (item.count || 1);
   const total = cart.reduce((s, item) => s + subtotal(item), 0);
   const navigate = useNavigate();
@@ -61,7 +43,7 @@ export default function Cart({ cart, setCart }) {
 
                       <div className="mt-3 flex items-center gap-3">
                         <button
-                          onClick={() => decrease(item.id)}
+                          onClick={() => decreaseQuantity(item.id)}
                           className="px-3 py-1 bg-gray-200 rounded"
                         >
                           -
@@ -70,14 +52,14 @@ export default function Cart({ cart, setCart }) {
                           {item.count || 1}
                         </div>
                         <button
-                          onClick={() => increase(item.id)}
+                          onClick={() => increaseQuantity(item.id)}
                           className="px-3 py-1 bg-gray-200 rounded"
                         >
                           +
                         </button>
 
                         <button
-                          onClick={() => removeItem(item.id)}
+                          onClick={() => removeFromCart(item.id)}
                           className="ml-6 text-sm text-red-600"
                         >
                           Remove
@@ -101,7 +83,7 @@ export default function Cart({ cart, setCart }) {
                 <div>
                   <button
                     className="px-6 py-2 rounded bg-gray-500 text-white hover:bg-gray-100 hover:text-gray-500 duration-200"
-                    onClick={() => setCart([])}
+                    onClick={clearCart}
                   >
                     Place Your Order
                   </button>

@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../hooks/useCart";
 
-export default function ProductCard({ p, cart, onAdd }) {
+export default function ProductCard({ p, onAdd }) {
   const navigate = useNavigate();
+  const { isInCart } = useCart();
+  const added = isInCart(p.id);
+
   return (
     <div className="bg-white rounded-2xl shadow p-4 flex flex-col hover:scale-105 duration-300 text-lg">
       <img src={p.image} className="rounded-xl cursor-pointer mb-4" onClick={() => navigate(`/product/${p.id}`)} />
@@ -15,10 +19,10 @@ export default function ProductCard({ p, cart, onAdd }) {
         </Link>
 
         <button
-          onClick={() => onAdd(p)}
+          onClick={() => !added && onAdd(p)}
           className="text-lg bg-gray-900 text-white px-8 py-2 rounded-full hover:bg-gray-500 transition duration-300"
         >
-          {cart.find((item) => item.id === p.id) ? (
+          {added ? (
             <Link to="/cart">View Cart</Link>
           ) : (
             "Add to Cart"
