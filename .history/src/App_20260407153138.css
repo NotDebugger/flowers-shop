@@ -1,0 +1,38 @@
+:root {
+  font-family: "Neucha", sans-serif;
+}
+.family {
+  font-family: "Dancing Script", sans-serif;
+}
+.outfit {
+  font-family: "Outfit", sans-serif;
+}
+.h1-title {
+  font-family: "Libre Baskerville", sans-serif;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #6a7282 !important;
+  opacity: 0;
+  transition: 0.3s;
+  background: white;
+  /* width: 40px !important;
+  height: 40px !important; */
+  padding: 9px;
+  top: 40% !important;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-pagination-bullet-active {
+  background: #6a7282 !important;
+}
+
+.swiper:hover .swiper-button-next,
+.swiper:hover .swiper-button-prev {
+  opacity: 1;
+}

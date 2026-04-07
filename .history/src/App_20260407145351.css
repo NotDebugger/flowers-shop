@@ -1,0 +1,30 @@
+:root {
+  font-family: "Neucha", sans-serif;
+}
+.family {
+  font-family: "Dancing Script", sans-serif;
+}
+.outfit {
+  font-family: "Outfit", sans-serif;
+}
+.h1-title {
+  font-family: "Libre Baskerville", sans-serif;
+}
+button:hover {
+  cursor: pointer;
+}
+
+/* الأسهم */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000; /* غير اللون هنا */
+}
+
+/* النقاط (pagination) */
+.swiper-pagination-bullet {
+  background: gray;
+}
+
+.swiper-pagination-bullet-active {
+  background: black;
+}
