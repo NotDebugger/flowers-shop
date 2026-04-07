@@ -2,13 +2,13 @@ import { useParams, Link } from "react-router-dom";
 import { useCart } from "../hooks/useCart";
 import NotFound from "./NotFound";
 import { useContext, useState } from "react";
-import { ProductsContext } from "../contexts/productsContext";
+import { roductsContext } from "../contexts/productsContext";
 import RelatedProducts from "../components/RelatedProducts";
 
 export default function ProductPage() {
   const { id } = useParams();
   const products = useContext(ProductsContext);
-  const product = products?.find((p) => p.id === Number(id));
+  const product = products.find((p) => p.id === Number(id));
   const [count, setCount] = useState(1);
   const { addToCart, isInCart } = useCart();
   const added = product ? isInCart(product.id) : false;

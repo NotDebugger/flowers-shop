@@ -6,6 +6,7 @@ export default function ProductCard({ p, onAdd }) {
   const { isInCart } = useCart();
   const added = isInCart(p.id);
   const location = useLocation();
+  console.log(location);
 
   return (
     <div className="bg-white rounded-2xl shadow p-4 flex flex-col hover:scale-105 duration-300 text-lg">
@@ -27,7 +28,7 @@ export default function ProductCard({ p, onAdd }) {
 
         <button
           onClick={() => !added && onAdd(p)}
-          className={`text-lg mt-4 mb-2 bg-gray-900 text-white ${location.pathname === "/search" ? "px-20" : "px-32"} py-2 rounded-full hover:bg-gray-500 transition duration-300`}
+          className="text-lg mt-4 mb-2 bg-gray-900 text-white px-32 py-2 rounded-full hover:bg-gray-500 transition duration-300"
         >
           {added ? <Link to="/cart">View Cart</Link> : "Add to Cart"}
         </button>

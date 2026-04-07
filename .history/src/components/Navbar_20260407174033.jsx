@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import SearchBar from "./searchBar";
-import SearchingResults from "../pages/SearchingResults";
+import SearchingResults from "./SearchingResults";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [query, setQuery] = useState("");
 
   return (
     <>
@@ -80,7 +81,7 @@ export default function Navbar() {
           </li>
 
           <li className="flex gap-2 self-center ml-3">
-            <SearchBar />
+            <SearchBar setQuery={setQuery} />
             <Link
               to="/cart"
               className="hover:bg-gray-500 duration-200 rounded-full flex justify-center items-center"
@@ -145,6 +146,8 @@ export default function Navbar() {
           </ul>
         </div>
       </div>
+
+      <SearchingResults query={query} />
     </>
   );
 }

@@ -8,7 +8,7 @@ export default function SearchBar() {
   const navigate = useNavigate();
   const { query, setQuery } = useContext(SearchQueryContext);
 
-  const handleSearch = () => navigate(`/search?q=${query}`);
+  const handleSearch = () => navigate(`search?q=${query}`);
 
   useEffect(() => {
     const handleClick = (e) => {
@@ -32,7 +32,7 @@ export default function SearchBar() {
         <input
           type="text"
           placeholder="Search..."
-          className={`transition-all h-9 pl-3 border-gray-500 rounded-l-full outline-none duration-300 border ${
+          className={`transition-all h-9 pl-2 border-gray-500 rounded-l-full outline-none duration-300 border ${
             open ? "w-52 opacity-100" : "w-0 opacity-0"
           }`}
           onChange={(e) => setQuery(e.target.value)}

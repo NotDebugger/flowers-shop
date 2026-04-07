@@ -27,7 +27,7 @@ export default function ProductCard({ p, onAdd }) {
 
         <button
           onClick={() => !added && onAdd(p)}
-          className={`text-lg mt-4 mb-2 bg-gray-900 text-white ${location.pathname === "/search" ? "px-20" : "px-32"} py-2 rounded-full hover:bg-gray-500 transition duration-300`}
+          className={`text-lg mt-4 mb-2 bg-gray-900 text-white ${location.pathname === "/search" ? "px-28" : "px-32"} py-2 rounded-full hover:bg-gray-500 transition duration-300`}
         >
           {added ? <Link to="/cart">View Cart</Link> : "Add to Cart"}
         </button>

@@ -53,7 +53,7 @@ export default function App() {
               <Route path="/sign-up" element={<Signup />} />
               <Route path="/products/:id" element={<ProductPage />} />
               <Route path="/cart" element={<Cart />} />
-              <Route path="/search" element={<SearchingResults />} />
+              <Route path="/search?q=:q" element={<SearchingResults />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />

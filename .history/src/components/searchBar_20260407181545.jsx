@@ -1,14 +1,12 @@
-import { useState, useEffect, useRef, useContext } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { SearchQueryContext } from "../contexts/SearchQueryContext";
 
-export default function SearchBar() {
+export default function SearchBar({ query, setQuery }) {
   const [open, setOpen] = useState(false);
   const searchRef = useRef(null);
   const navigate = useNavigate();
-  const { query, setQuery } = useContext(SearchQueryContext);
 
-  const handleSearch = () => navigate(`/search?q=${query}`);
+  const handleSearch = () => navigate(`search?q=${query}`);
 
   useEffect(() => {
     const handleClick = (e) => {
@@ -31,8 +29,8 @@ export default function SearchBar() {
       >
         <input
           type="text"
-          placeholder="Search..."
-          className={`transition-all h-9 pl-3 border-gray-500 rounded-l-full outline-none duration-300 border ${
+          placeholder="  Search..."
+          className={`transition-all h-9 border-gray-500 outline-none duration-300 border ${
             open ? "w-52 opacity-100" : "w-0 opacity-0"
           }`}
           onChange={(e) => setQuery(e.target.value)}

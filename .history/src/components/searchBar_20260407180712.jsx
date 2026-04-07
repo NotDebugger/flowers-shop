@@ -1,18 +1,12 @@
-import { useState, useEffect, useRef, useContext } from "react";
-import { useNavigate } from "react-router-dom";
-import { SearchQueryContext } from "../contexts/SearchQueryContext";
+import { useState, useEffect, useRef } from "react";
 
-export default function SearchBar() {
+export default function SearchBar({ setQuery }) {
   const [open, setOpen] = useState(false);
   const searchRef = useRef(null);
-  const navigate = useNavigate();
-  const { query, setQuery } = useContext(SearchQueryContext);
-
-  const handleSearch = () => navigate(`/search?q=${query}`);
 
   useEffect(() => {
     const handleClick = (e) => {
-      if (!searchRef.current.contains(e.target)) {
+      if (searchRef.current && !searchRef.current.contains(e.target)) {
         setOpen(false);
       }
     };
@@ -23,21 +17,14 @@ export default function SearchBar() {
 
   return (
     <div className="flex items-center" ref={searchRef}>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          handleSearch();
-        }}
-      >
-        <input
-          type="text"
-          placeholder="Search..."
-          className={`transition-all h-9 pl-3 border-gray-500 rounded-l-full outline-none duration-300 border ${
-            open ? "w-52 opacity-100" : "w-0 opacity-0"
-          }`}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-      </form>
+      <input
+        type="text"
+        placeholder="  Search..."
+        className={`transition-all h-9 border-gray-500 outline-none duration-300 border ${
+          open ? "w-52 opacity-100" : "w-0 opacity-0"
+        }`}
+        onChange={(e) => setQuery(e.target.value)}
+      />
       <svg
         className={`hover:fill-white hover:bg-gray-500 p-1.5 rounded-full cursor-pointer duration-200 ${open && "rounded-r-full rounded-l-none bg-gray-500! fill-white!"}`}
         onClick={() => setOpen(!open)}

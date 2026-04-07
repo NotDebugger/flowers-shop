@@ -8,7 +8,7 @@ export default function SearchBar() {
   const navigate = useNavigate();
   const { query, setQuery } = useContext(SearchQueryContext);
 
-  const handleSearch = () => navigate(`/search?q=${query}`);
+  const handleSearch = () => navigate(`search?q=${query}`);
 
   useEffect(() => {
     const handleClick = (e) => {
