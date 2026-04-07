@@ -4,7 +4,6 @@ import SearchBar from "./searchBar";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [query, setQuery] = useState("");
 
   return (
     <>
@@ -79,8 +78,9 @@ export default function Navbar() {
             </Link>
           </li>
 
-          <li className="flex gap-2 self-center ml-3">
-            <SearchBar setQuery={setQuery} />
+          <li className="self-center"></li>
+          <li className="self-center">
+            <SearchBar />
             <Link
               to="/cart"
               className="hover:bg-gray-500 duration-200 rounded-full flex justify-center items-center"
