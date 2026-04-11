@@ -8,7 +8,7 @@ export default function ProductCard({ p, onAdd }) {
   const added = isInCart(p.id);
 
   return (
-    <div className="bg-gray-50 rounded-2xl p-4 flex flex-col hover:scale-105 duration-300 text-lg">
+    <div className="bg-white rounded-2xl p-4 flex flex-col  duration-300 text-lg">
       <img
         src={p.image}
         className="rounded-xl cursor-pointer mb-4"
