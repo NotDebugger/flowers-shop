@@ -1,33 +1,166 @@
 :root {
-  font-family: "Neucha", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
+
 .family {
   font-family: "Dancing Script", sans-serif;
 }
+
 .outfit {
   font-family: "Outfit", sans-serif;
 }
+
 .h1-title {
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: "Libre Baskerville", serif;
 }
+
 button:hover {
   cursor: pointer;
 }
 
+.section-wrap {
+  width: min(100%, 78rem);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.soft-card {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(86, 104, 88, 0.12);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(18px);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(86, 104, 88, 0.14);
+  backdrop-filter: blur(20px);
+}
+
+.page-banner {
+  background:
+    radial-gradient(circle at top right, rgba(238, 213, 220, 0.8), transparent 34%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(247, 241, 234, 0.92));
+  border: 1px solid rgba(86, 104, 88, 0.12);
+  box-shadow: var(--shadow-soft);
+}
+
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.84);
+  padding: 0.45rem 0.9rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--rose-deep);
+}
+
+.flower-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: white;
+  padding: 0.95rem 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 16px 30px rgba(67, 104, 80, 0.24);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.flower-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 20px 34px rgba(67, 104, 80, 0.28);
+}
+
+.flower-button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(86, 104, 88, 0.14);
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--ink);
+  padding: 0.95rem 1.5rem;
+  font-weight: 600;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.flower-button-secondary:hover {
+  transform: translateY(-1px);
+  border-color: rgba(67, 104, 80, 0.25);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.field {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid rgba(86, 104, 88, 0.16);
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--ink);
+  padding: 0.95rem 1rem;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.field:focus {
+  border-color: rgba(67, 104, 80, 0.42);
+  box-shadow: 0 0 0 4px rgba(67, 104, 80, 0.12);
+  background: white;
+}
+
+.product-copy {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.fade-up {
+  animation: fadeUp 0.7s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .swiper-button-next,
 .swiper-button-prev {
-  color: #6a7282 !important;
+  color: #436850 !important;
   opacity: 0;
   transition: 0.3s;
-  background: white;
-  padding: 9px;
-  top: 40% !important;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 12px;
+  top: 42% !important;
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 24px rgba(36, 49, 39, 0.1);
 }
 
 .swiper-pagination-bullet-active {
-  background: #6a7282 !important;
+  background: #436850 !important;
 }
 
 .swiper:hover .swiper-button-next,
@@ -37,7 +170,7 @@ button:hover {
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background-color: #efefef;
+  background-color: white;
 }
 
 .swiper-button-disabled {
@@ -46,4 +179,11 @@ button:hover {
 
 .cart-fill:hover svg {
   fill: #fff;
+}
+
+@media (max-width: 767px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
 }

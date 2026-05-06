@@ -1,58 +1,50 @@
 export default function PasswordForgot() {
   return (
-    <>
-      <div className="min-h-screen mt-16 lg:mt-5 flex justify-center items-center bg-gray-50 px-4">
-        <div
-          className="
-            px-8 py-8 
-            w-full 
-            max-w-md 
-            bg-white 
-            border 
-            border-gray-100 
-            shadow 
-            rounded-2xl
-          "
+    <section className="section-wrap py-8">
+      <div className="soft-card mx-auto max-w-2xl rounded-[2.4rem] p-8 md:p-10">
+        <span className="section-kicker">Reset access</span>
+        <h1 className="h1-title mt-6 text-4xl text-slate-900 md:text-5xl">
+          Forgot your password?
+        </h1>
+        <p className="mt-4 text-lg leading-8 text-slate-600">
+          Enter your email and choose a new password to get back into your
+          account.
+        </p>
+
+        <form
+          className="mt-8 flex flex-col gap-4"
+          onSubmit={(e) => e.preventDefault()}
         >
-          <h1 className="text-2xl md:text-3xl font-bold mb-6 text-center text-gray-500 outfit">
-            Forgot Your Password?
-          </h1>
+          <label className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">
+            Email
+          </label>
+          <input type="email" placeholder="Email" className="field" required />
 
-          <form className="flex flex-col gap-4">
-            <label className="ml-1 text-base md:text-lg">
-              Enter Your Email
-            </label>
-            <input
-              type="email"
-              placeholder="Email"
-              className="p-3 border rounded-xl outline-0"
-              required
-            />
+          <label className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">
+            New password
+          </label>
+          <input
+            type="password"
+            placeholder="Password"
+            className="field"
+            required
+          />
 
-            <label className="ml-1 text-base md:text-lg">New Password</label>
-            <input
-              type="password"
-              placeholder="Password"
-              className="p-3 border rounded-xl outline-0"
-              required
-            />
+          <label className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">
+            Confirm password
+          </label>
+          <input
+            type="password"
+            placeholder="Password"
+            className="field"
+            required
+          />
 
-            <label className="ml-1 text-base md:text-lg">
-              Confirm Password
-            </label>
-            <input
-              type="password"
-              placeholder="Password"
-              className="p-3 border rounded-xl outline-0"
-              required
-            />
-
-            <button className="bg-gray-500 hover:bg-gray-600 text-white p-3 rounded-xl text-lg">
-              Send Reset
-            </button>
-          </form>
-        </div>
+          <button className="flower-button mt-2 w-full sm:w-fit" type="submit">
+            Save new password
+          </button>
+        </form>
       </div>
-    </>
+    </section>
   );
 }

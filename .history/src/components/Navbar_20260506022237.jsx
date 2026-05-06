@@ -28,8 +28,8 @@ export default function Navbar() {
   const navClass = ({ isActive }) =>
     `rounded-full px-4 py-2 text-sm font-medium transition duration-200 ${
       isActive
-        ? "bg-(--accent) text-white! shadow-lg shadow-[rgba(67,104,80,0.24)]"
-        : "text-slate-700 hover:bg-white hover:text-(--accent) hover:shadow-sm"
+        ? "bg-[var(--accent)] text-white! shadow-lg shadow-[rgba(67,104,80,0.24)]"
+        : "text-slate-700 hover:bg-white hover:text-[var(--accent)]"
     }`;
 
   return (
@@ -43,13 +43,13 @@ export default function Navbar() {
 
       <header className="fixed inset-x-0 top-0 z-40 px-3 pt-3 md:px-6 md:pt-5">
         <div className="section-wrap px-0">
-          <div className="glass-panel mx-auto rounded-4xl px-4 py-3 shadow-[0_18px_40px_rgba(36,49,39,0.08)] md:px-6">
+          <div className="glass-panel mx-auto rounded-[2rem] px-4 py-3 shadow-[0_18px_40px_rgba(36,49,39,0.08)] md:px-6">
             <div className="flex items-center justify-between gap-3">
               <Link to="/" className="min-w-0">
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-(--rose-deep)">
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--rose-deep)]">
                   Boutique Florals
                 </p>
-                <h1 className="family truncate text-3xl text-(--accent) md:text-4xl">
+                <h1 className="family truncate text-3xl text-[var(--accent)] md:text-4xl">
                   Flowers Shop
                 </h1>
               </Link>
@@ -63,11 +63,11 @@ export default function Navbar() {
                   ))}
                 </nav>
 
-                <SearchBar className="w-full max-w-[18rem]" />
+                <SearchBar className="w-12 md:w-auto" />
 
                 <Link
                   to="/cart"
-                  className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/60 bg-white/80 p-0 text-slate-700 shadow-sm transition hover:bg-white hover:text-(--accent) hover:shadow-md"
+                  className="relative flex h-12 w-12 items-center justify-center rounded-full bg-white/78 text-slate-700 transition hover:bg-white hover:text-[var(--accent)]"
                   aria-label="View cart"
                 >
                   <svg
@@ -80,7 +80,7 @@ export default function Navbar() {
                     <path d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Zm160-560h160q0-33-23.5-56.5T480-800q-33 0-56.5 23.5T400-720ZM240-160v-480 480Z" />
                   </svg>
                   {itemCount > 0 && (
-                    <span className="absolute -right-1 -top-1 flex h-6 min-w-6 items-center justify-center rounded-full bg-(--rose-deep) px-1 text-xs font-bold text-white">
+                    <span className="absolute -right-1 -top-1 flex h-6 min-w-6 items-center justify-center rounded-full bg-[var(--rose-deep)] px-1 text-xs font-bold text-white">
                       {itemCount}
                     </span>
                   )}
@@ -94,7 +94,7 @@ export default function Navbar() {
               <div className="flex items-center gap-2 md:hidden">
                 <Link
                   to="/cart"
-                  className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/60 bg-white/80 p-0 text-slate-700 shadow-sm transition hover:bg-white hover:text-(--accent)"
+                  className="relative flex h-11 w-11 items-center justify-center rounded-full bg-white/78 text-slate-700"
                   aria-label="View cart"
                 >
                   <svg
@@ -107,7 +107,7 @@ export default function Navbar() {
                     <path d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Zm160-560h160q0-33-23.5-56.5T480-800q-33 0-56.5 23.5T400-720ZM240-160v-480 480Z" />
                   </svg>
                   {itemCount > 0 && (
-                    <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-(--rose-deep) px-1 text-[10px] font-bold text-white">
+                    <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-[var(--rose-deep)] px-1 text-[10px] font-bold text-white">
                       {itemCount}
                     </span>
                   )}
@@ -140,7 +140,7 @@ export default function Navbar() {
 
             <div
               className={`overflow-hidden transition-all duration-300 md:hidden ${
-                open ? "max-h-128 pt-4" : "max-h-0"
+                open ? "max-h-[32rem] pt-4" : "max-h-0"
               }`}
             >
               <div className="rounded-[1.6rem] bg-white/88 p-4 shadow-lg">
@@ -153,8 +153,8 @@ export default function Navbar() {
                       className={({ isActive }) =>
                         `rounded-2xl px-4 py-3 text-sm font-medium transition ${
                           isActive
-                            ? "bg-(--accent) text-white!"
-                            : "bg-(--surface-muted) text-slate-700 hover:bg-white hover:text-(--accent)"
+                            ? "bg-[var(--accent)] text-white"
+                            : "bg-[var(--surface-muted)] text-slate-700"
                         }`
                       }
                       onClick={() => setOpen(false)}

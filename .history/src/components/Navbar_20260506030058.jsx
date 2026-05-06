@@ -67,7 +67,7 @@ export default function Navbar() {
 
                 <Link
                   to="/cart"
-                  className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/60 bg-white/80 p-0 text-slate-700 shadow-sm transition hover:bg-white hover:text-(--accent) hover:shadow-md"
+                  className="relative flex h-12! w-12! items-center justify-center rounded-full bg-white/78 text-slate-700 transition hover:bg-white hover:text-(--accent)"
                   aria-label="View cart"
                 >
                   <svg
@@ -94,7 +94,7 @@ export default function Navbar() {
               <div className="flex items-center gap-2 md:hidden">
                 <Link
                   to="/cart"
-                  className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/60 bg-white/80 p-0 text-slate-700 shadow-sm transition hover:bg-white hover:text-(--accent)"
+                  className="relative flex h-11 w-11 items-center justify-center rounded-full bg-white/78 text-slate-700"
                   aria-label="View cart"
                 >
                   <svg

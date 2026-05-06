@@ -1,22 +1,26 @@
+import { Link } from "react-router-dom";
+
 export default function NotFound() {
   return (
-    <div className="text-center mt-32 mb-16">
-      <h1 className="text-5xl font-bold text-center flex justify-center items-center gap-2">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="40px"
-          viewBox="0 -960 960 960"
-          width="40px"
-          fill="#101828"
-        >
-          <path d="M508.5-291.5Q520-303 520-320t-11.5-28.5Q497-360 480-360t-28.5 11.5Q440-337 440-320t11.5 28.5Q463-280 480-280t28.5-11.5ZM440-440h80v-240h-80v240Zm40 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
-        </svg>
-        <span>404</span>
-      </h1>
-      <h2 className="text-4xl font-bold text-center">Page Not Found</h2>
-      <p className="text-xl">
-        Sorry, the page you are looking for does not exist.
-      </p>
-    </div>
+    <section className="section-wrap py-12">
+      <div className="soft-card mx-auto max-w-2xl rounded-[2.4rem] p-8 text-center md:p-12">
+        <span className="section-kicker">404</span>
+        <h1 className="h1-title mt-6 text-5xl text-slate-900 md:text-6xl">
+          The flowers made it, but this page did not.
+        </h1>
+        <p className="mt-4 text-lg leading-8 text-slate-600">
+          Sorry, the page you are looking for does not exist or may have been
+          moved.
+        </p>
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <Link to="/" className="flower-button">
+            Back home
+          </Link>
+          <Link to="/shop" className="flower-button-secondary">
+            Browse flowers
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 }
