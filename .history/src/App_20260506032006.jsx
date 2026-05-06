@@ -67,7 +67,7 @@ export default function App() {
   if (error) {
     return (
       <div className="flex min-h-screen items-center justify-center px-4 py-12">
-        <div className="soft-card fade-up w-full max-w-xl rounded-4xl p-8 text-center md:p-10">
+        <div className="soft-card fade-up w-full max-w-xl rounded-[2rem] p-8 text-center md:p-10">
           <span className="section-kicker">Storefront Status</span>
           <h1 className="h1-title mt-6 text-4xl text-slate-900">
             The bouquet list is taking a moment.
